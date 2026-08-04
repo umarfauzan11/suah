@@ -1,0 +1,459 @@
+/* SubBrands Section Styles */
+.subrands-section-padding {
+  padding: 80px 0;
+}
+
+.subrands-bg-light-bg {
+  /* Glass effect - dark version */
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* Optional: Add gradient overlay for more depth */
+.subrands-bg-light-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Make sure content stays above the glass effect */
+.subrands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Alternative: More dramatic glass effect */
+.subrands-bg-glass-dark {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Alternative: Subtle glass with gradient */
+.subrands-bg-glass-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 30, 0.8) 0%,
+    rgba(10, 10, 20, 0.6) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Typography */
+.subrands-section-title {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin: 0 0 8px 0;
+  color: white;
+}
+
+.subrands-section-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 48px 0;
+}
+
+/* Animations */
+.subrands-fade-in {
+  opacity: 0;
+  animation: subrandsFadeIn 0.8s ease forwards;
+}
+
+.subrands-delay-1 {
+  animation-delay: 0.2s;
+}
+
+@keyframes subrandsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand Grid */
+.subrands-brand-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Service Cards - Glass effect too! */
+.subrands-service-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px 48px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subrands-service-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.subrands-service-card:active {
+  transform: translateY(-4px);
+}
+
+.subrands-text-center {
+  text-align: center;
+}
+
+.subrands-img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modal Styles - Glass effect */
+.subrands-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1050;
+  display: none;
+  overflow-y: auto;
+}
+
+.subrands-show {
+  display: block;
+}
+
+.subrands-modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 1.75rem auto;
+  max-width: 500px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 3.5rem);
+}
+
+.subrands-modal-dialog-centered {
+  min-height: calc(100% - 3.5rem);
+  display: flex;
+  align-items: center;
+}
+
+.subrands-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-clip: padding-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  outline: 0;
+  padding: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.subrands-text-white {
+  color: #ffffff;
+}
+
+/* Modal Header */
+.subrands-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.subrands-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.subrands-btn-close {
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  font-size: 24px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subrands-btn-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.subrands-btn-close::before {
+  content: "×";
+  font-size: 28px;
+  font-weight: 300;
+}
+
+/* Modal Body */
+.subrands-modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Modal Footer */
+.subrands-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+/* Buttons with glass effect */
+.subrands-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 10px 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.subrands-btn-outline-light {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.subrands-btn-outline-light:hover {
+  color: #000000;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.subrands-btn-outline-light:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subrands-section-padding {
+    padding: 60px 0;
+  }
+
+  .subrands-container {
+    padding: 0 16px;
+  }
+
+  .subrands-section-title {
+    font-size: 30px;
+  }
+
+  .subrands-section-subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .subrands-brand-grid {
+    gap: 1rem;
+  }
+
+  .subrands-service-card {
+    padding: 24px 32px;
+    min-width: 140px;
+  }
+
+  .subrands-modal-dialog {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .subrands-modal-content {
+    border-radius: 16px;
+  }
+
+  .subrands-modal-header {
+    padding: 16px 20px;
+  }
+
+  .subrands-modal-body {
+    padding: 20px;
+  }
+
+  .subrands-modal-footer {
+    padding: 16px 20px 20px;
+  }
+
+  .subrands-modal-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subrands-section-padding {
+    padding: 40px 0;
+  }
+
+  .subrands-section-title {
+    font-size: 26px;
+  }
+
+  .subrands-section-subtitle {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .subrands-service-card {
+    padding: 20px 24px;
+    min-width: 120px;
+  }
+
+  .subrands-service-card img {
+    width: 60px !important;
+  }
+
+  .subrands-modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .subrands-modal-content {
+    border-radius: 12px;
+  }
+
+  .subrands-modal-header {
+    padding: 12px 16px;
+  }
+
+  .subrands-modal-body {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .subrands-modal-footer {
+    padding: 12px 16px 16px;
+  }
+
+  .subrands-modal-title {
+    font-size: 17px;
+  }
+
+  .subrands-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .subrands-btn-close {
+    width: 36px;
+    height: 36px;
+  }
+
+  .subrands-btn-close::before {
+    font-size: 24px;
+  }
+}
+
+/* Smooth Scroll Behavior */
+@media (prefers-reduced-motion: reduce) {
+  .subrands-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+
+  .subrands-service-card:hover {
+    transform: none;
+  }
+
+  .subrands-btn-outline-light:hover {
+    transform: none;
+  }
+}
+
+/* Support for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .subrands-bg-light-bg {
+    background: rgba(10, 10, 10, 0.9);
+  }
+  
+  .subrands-modal-content {
+    background: rgba(10, 10, 15, 0.95);
+  }
+  
+  .subrands-service-card {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}

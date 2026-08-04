@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section id="about" className="section-padding">
       <div className="container">
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', margin: '1rem 2rem'}}>
           <div className="fade-in">
             <img src="/icon/suah_icon.png" alt="Tentang Kami" className="img-fluid about-img" />
           </div>

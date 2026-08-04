@@ -473,8 +473,3 @@ img {
   color: black;
   border-radius: 12px;
 }
-
-.contact-form-input input, textarea {
-  width: 100%;
-  margin-bottom: 0.4rem;
-}

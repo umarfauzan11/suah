@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/subrands.css';
 
 export default function SubBrands() {
   const [showAnnishofieModal, setShowAnnishofieModal] = useState(false);
@@ -6,26 +7,36 @@ export default function SubBrands() {
 
   return (
     <>
-      <section id="services" className="section-padding bg-light-bg">
-        <div className="container">
-          <h2 className="section-title fade-in">Sub-Brand Kami</h2>
-          <p className="section-subtitle fade-in delay-1">
+      <section id="services" className="subrands-section-padding subrands-bg-light-bg">
+        <div className="subrands-container">
+          <h2 className="subrands-section-title subrands-fade-in">Sub-Brand Kami</h2>
+          <p className="subrands-section-subtitle subrands-fade-in subrands-delay-1">
             Jelajahi sub-brand kami yang menawarkan produk berkualitas tinggi.
           </p>
-          <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', margin: '0 auto', gap: '0.3rem' }}>
+          <div className="subrands-brand-grid">
               <div 
-                className="service-card text-center" 
+                className="subrands-service-card subrands-text-center" 
                 onClick={() => setShowAnnishofieModal(true)}
                 style={{ cursor: 'pointer' }}
               >
-                <img src="/img/d53c7dc5-46a1-4fdd-9c40-9f59edfbe885 (1)-Photoroom.png" alt="Annishofie Logo" className="img-fluid" style={{ width: '80px', filter: 'brightness(0) invert(1)', mixBlendMode: 'difference'}} />
+                <img 
+                  src="/img/d53c7dc5-46a1-4fdd-9c40-9f59edfbe885 (1)-Photoroom.png" 
+                  alt="Annishofie Logo" 
+                  className="subrands-img-fluid" 
+                  style={{ width: '80px', filter: 'brightness(0) invert(1)', mixBlendMode: 'difference'}} 
+                />
               </div>
               <div 
-                className="service-card text-center" 
+                className="subrands-service-card subrands-text-center" 
                 onClick={() => setShowSuahModal(true)}
                 style={{ cursor: 'pointer' }}
               >
-                <img src="/img/logo_transparent.png" alt="SUAH Logo" className="img-fluid" style={{ width: '80px' }} />
+                <img 
+                  src="/img/logo_transparent.png" 
+                  alt="SUAH Logo" 
+                  className="subrands-img-fluid" 
+                  style={{ width: '80px' }} 
+                />
               </div>
           </div>
         </div>
@@ -33,23 +44,23 @@ export default function SubBrands() {
 
       {/* Modal for Annishofie */}
       {showAnnishofieModal && (
-        <div className="modal show" style={{ display: 'block' }} tabIndex="-1">
-          <div className="modal-dialog modal-dialog-centered">
-            <div style={{ backgroundColor: '#070707' }} className="modal-content text-white">
-              <div className="modal-header">
-                <h5 className="modal-title">Annishofie</h5>
+        <div className="subrands-modal subrands-show" style={{ display: 'block' }} tabIndex="-1">
+          <div className="subrands-modal-dialog subrands-modal-dialog-centered">
+            <div style={{ backgroundColor: '#070707' }} className="subrands-modal-content subrands-text-white">
+              <div className="subrands-modal-header">
+                <h5 className="subrands-modal-title">Annishofie</h5>
                 <button 
                   type="button" 
-                  className="btn-close btn-close-white" 
+                  className="subrands-btn-close subrands-btn-close-white" 
                   onClick={() => setShowAnnishofieModal(false)}
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
+              <div className="subrands-modal-body">
                 Annishofie adalah sub-brand kami yang menyediakan pakaian tidur berkualitas tinggi dengan desain elegan dan nyaman untuk digunakan sehari-hari.
               </div>
-              <div className="modal-footer">
-                <a href="https://annishofie.netlify.app/" className="btn btn-outline-light">Kunjungi</a>
+              <div className="subrands-modal-footer">
+                <a href="https://annishofie.netlify.app/" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
               </div>
             </div>
           </div>
@@ -58,23 +69,23 @@ export default function SubBrands() {
 
       {/* Modal for SUAH */}
       {showSuahModal && (
-        <div className="modal show" style={{ display: 'block' }} tabIndex="-1">
-          <div className="modal-dialog modal-dialog-centered">
-            <div style={{ backgroundColor: '#070707' }} className="modal-content text-white">
-              <div className="modal-header">
-                <h5 className="modal-title">Agie's Snack</h5>
+        <div className="subrands-modal subrands-show" style={{ display: 'block' }} tabIndex="-1">
+          <div className="subrands-modal-dialog subrands-modal-dialog-centered">
+            <div style={{ backgroundColor: '#070707' }} className="subrands-modal-content subrands-text-white">
+              <div className="subrands-modal-header">
+                <h5 className="subrands-modal-title">Agie's Snack</h5>
                 <button 
                   type="button" 
-                  className="btn-close btn-close-white" 
+                  className="subrands-btn-close subrands-btn-close-white" 
                   onClick={() => setShowSuahModal(false)}
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
+              <div className="subrands-modal-body">
                 Agie's Snack adalah sub-brand kami yang fokus pada produk bakery autentik dengan cita rasa yang hangat dan memanjakan lidah.
               </div>
-              <div className="modal-footer">
-                <a href="https://agiessnack.netlify.app/shop" className="btn btn-outline-light">Kunjungi</a>
+              <div className="subrands-modal-footer">
+                <a href="https://agiessnack.netlify.app/shop" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
               </div>
             </div>
           </div>

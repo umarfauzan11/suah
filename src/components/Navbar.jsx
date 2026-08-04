@@ -18,6 +18,11 @@ export default function Navbar() {
     borderBottom: '1px solid rgba(26, 26, 26, 0.2)',
     boxShadow: '0 1px 15px rgba(0, 0, 0, 0.1)',
     transition: 'all 0.3s ease',
+    position: 'fixed',
+    top: '0',
+    zIndex: '99',
+    right: '0',
+    left: '0'
   };
 
   return (
