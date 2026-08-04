@@ -3,9 +3,9 @@ export default function About() {
     <section id="about" className="section-padding">
       <div className="container">
         <div style={{display: 'flex', justifyContent: 'space-between', margin: '1rem 2rem'}}>
-          <div className="fade-in">
-            <img src="/icon/suah_icon.png" alt="Tentang Kami" className="img-fluid about-img" />
-          </div>
+            <div className="fade-in">
+              <img src="/icon/suah_icon.png" alt="Logo CV. SUAH - Brand Bakery dan Baju Tidur" className="img-fluid about-img" />
+            </div>
           <div className="col-lg-6 fade-in delay-1 about-text mt-4 mt-lg-0">
             <h2 className="section-titles">Tentang Kami</h2>
             <p className="section-desc">

@@ -21,7 +21,7 @@ export default function SubBrands() {
               >
                 <img 
                   src="/img/d53c7dc5-46a1-4fdd-9c40-9f59edfbe885 (1)-Photoroom.png" 
-                  alt="Annishofie Logo" 
+                  alt="Logo Annishofie - Sub-brand Baju Tidur Estetik dari CV. SUAH" 
                   className="subrands-img-fluid" 
                   style={{ width: '80px', filter: 'brightness(0) invert(1)', mixBlendMode: 'difference'}} 
                 />
@@ -33,7 +33,7 @@ export default function SubBrands() {
               >
                 <img 
                   src="/img/logo_transparent.png" 
-                  alt="SUAH Logo" 
+                  alt="Logo SUAH - Brand Bakery dan Baju Tidur" 
                   className="subrands-img-fluid" 
                   style={{ width: '80px' }} 
                 />
@@ -60,7 +60,7 @@ export default function SubBrands() {
                 Annishofie adalah sub-brand kami yang menyediakan pakaian tidur berkualitas tinggi dengan desain elegan dan nyaman untuk digunakan sehari-hari.
               </div>
               <div className="subrands-modal-footer">
-                <a href="https://annishofie.netlify.app/" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
+                <a href="https://annishofie.suah.web.id/" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function SubBrands() {
                 Agie's Snack adalah sub-brand kami yang fokus pada produk bakery autentik dengan cita rasa yang hangat dan memanjakan lidah.
               </div>
               <div className="subrands-modal-footer">
-                <a href="https://agiessnack.netlify.app/shop" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
+                <a href="https://agies-snack.suah.web.id" className="subrands-btn subrands-btn-outline-light">Kunjungi</a>
               </div>
             </div>
           </div>

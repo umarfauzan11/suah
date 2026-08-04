@@ -1,11 +1,12 @@
 {
-  "name": "suah",
-  "short_name": "suah",
-  "description": "",
+  "name": "SUAH - Bakery & Baju Tidur",
+  "short_name": "SUAH",
+  "description": "CV. SUAH - Brand gaya hidup yang menyatukan kehangatan rasa dan kenyamanan berbusana. Produk bakery autentik dan baju tidur estetik berkualitas tinggi.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#8D8D8D",
+  "orientation": "portrait-primary",
   "scope": "/",
   "icons": [
     {
