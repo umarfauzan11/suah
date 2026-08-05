@@ -22,7 +22,7 @@ export default function Gallery() {
                 </div>
                 <br />
                 <div style={{ background: 'radial-gradient(circle,rgba(171, 103, 36, 1) 0%, rgba(204, 141, 39, 1) 100%)', padding: '1rem' }} className="justify-content-center">
-                    <h3 style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }} className="section-title fade-in">Dari <img src="/img/logo_transparent.png" alt="Logo Agie's Snack - Sub-brand Bakery SUAH" style={{ width: '90px', paddingLeft: '10px' }} /></h3>
+                    <h3 style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }} className="section-title fade-in">Dari <img className="image-responsif" src="/img/logo_transparent.png" alt="Logo Agie's Snack - Sub-brand Bakery SUAH" style={{ width: '90px', paddingLeft: '10px' }} /></h3>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
                         <div className="portfolio-items">
                             <img src="/img/3image/pirings.png" className="img-fluid portfolio-main-imgs1" alt="Siomay Agie's Snack - Bakery homemade" />

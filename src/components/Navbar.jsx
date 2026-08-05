@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,47 +26,45 @@ export default function Navbar() {
     left: '0'
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <nav
-      style={navbarStyle}
-    >
+    <nav style={navbarStyle}>
       <div className="containers">
-        <div>
-          <img src="/icon/800x300_white-Photoroomm.png" style={{ width: '90px', paddingLeft: '15px' }} alt="SUAH Logo" />
+        <div className="navbar-brand">
+          {window.innerWidth < 768 ? (
+            <img src="/icon/suah_icon.png" style={{ paddingLeft: '15px' }} alt="SUAH Logo" />
+          ) : (
+            <img src="/icon/800x300_white-Photoroomm.png" style={{ width: '90px', paddingLeft: '15px' }} alt="SUAH Logo" />
+          )}
         </div>
-          <div className="navbar-text" id="navbarNav">
-            <ul className="navbar-nav ms-auto" style={{ paddingRight: '15px' }}>
-                <a className="nav-link" href="#home" style={{
-                  position: 'relative',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  transition: 'all 0.3s ease',
-                }}>Home</a>
-                <a className="nav-link" href="#about" style={{
-                  position: 'relative',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  transition: 'all 0.3s ease',
-                }}>About</a>
-                <a className="nav-link" href="#services" style={{
-                  position: 'relative',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  transition: 'all 0.3s ease',
-                }}>Services</a>
-                <a className="nav-link" href="#portfolio" style={{
-                  position: 'relative',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  transition: 'all 0.3s ease',
-                }}>Gallery</a>
-                <a className="nav-link" href="#contact" style={{
-                  position: 'relative',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  transition: 'all 0.3s ease',
-                }}>Contact</a>
-            </ul>
+
+        {/* Hamburger Menu Button */}
+        <button
+          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Navigation Links */}
+        <div className={`navbar-text ${isMobileMenuOpen ? 'active' : ''}`} id="navbarNav">
+          <ul className="navbar-nav">
+            <a className="nav-link" href="#home" onClick={closeMobileMenu}>Home</a>
+            <a className="nav-link" href="#about" onClick={closeMobileMenu}>About</a>
+            <a className="nav-link" href="#services" onClick={closeMobileMenu}>Services</a>
+            <a className="nav-link" href="#portfolio" onClick={closeMobileMenu}>Gallery</a>
+            <a className="nav-link" href="#contact" onClick={closeMobileMenu}>Contact</a>
+          </ul>
         </div>
       </div>
     </nav>
