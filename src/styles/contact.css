@@ -200,7 +200,7 @@
 }
 
 .submit-button:hover svg {
-  transform: translateX(4px);
+  transform: translateX(2px);
 }
 
 /* Responsive Design */
