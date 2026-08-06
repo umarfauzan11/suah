@@ -18,7 +18,7 @@ export default function Home() {
       <VeloraEmbed
         context="general"
         title="Tanya Velora"
-        themeColor="#6366f1"
+        themeColor="#D4AF37"
       />
       <Hero />
       <About />
