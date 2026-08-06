@@ -7,6 +7,7 @@ import SubBrands from '../components/SubBrands';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import VeloraEmbed from '@bmdu_studio/velora-embed';
 
 export default function Home() {
   return (
@@ -14,6 +15,11 @@ export default function Home() {
       <Preloader />
       <MaintenanceNotification />
       <Navbar />
+      <VeloraEmbed
+        context="general"
+        title="Tanya Velora"
+        themeColor="#6366f1"
+      />
       <Hero />
       <About />
       <SubBrands />
